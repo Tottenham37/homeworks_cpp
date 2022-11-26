@@ -1,10 +1,12 @@
 #include <iostream>
-
+#include <string>
 #include <utils.hpp>
+#include <vector>
 
 int main() {
-  for (const auto& word : SplitString("asdas das das fgag (adasd 1fas)")) {
-    std::cout << word << "\n";
+  auto result = SplitString("aaa aaa ");
+  for (std::string word : result) {
+    std::cout << word << '\n';
   }
   return 0;
 }
