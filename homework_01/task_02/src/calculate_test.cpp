@@ -22,3 +22,17 @@ TEST_CASE("Calculate", "[simple_multiply]") {
   CHECK(Calculate("1*0") == 0);
   CHECK(Calculate("0*0") == 0);
 }
+
+TEST_CASE("Calculate", "[multiply]") {
+  CHECK(Calculate("45 * 42") == 1890);
+  CHECK(Calculate("222 * 2") == 444);
+  CHECK(Calculate("1111 * 0") == 0);
+  CHECK(Calculate("2 * 50") == 100);
+}
+
+TEST_CASE("Calculate", "[division]") {
+  CHECK(Calculate("25 / 5") == 5);
+  CHECK(Calculate("1 / 1") == 1);
+  CHECK(Calculate("0 / 128") == 0);
+  CHECK_THROWS(Calculate("14 / 0"));
+}
